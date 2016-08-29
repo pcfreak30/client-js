@@ -90,6 +90,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-qunit');
 	grunt.loadNpmTasks('grunt-jscs');
 	grunt.loadNpmTasks('grunt-umd');
-	grunt.registerTask('default', [ 'jshint', 'jscs', 'concat:js', 'umd:all', 'uglify:js', 'qunit']);
+	grunt.registerTask('lint', ['jshint', 'jscs']);
+	grunt.registerTask('build', ['concat:js', 'umd:all', 'uglify:js']);
 	grunt.registerTask('test', ['qunit:all']);
+	grunt.registerTask('default', ['lint', 'build', 'test']);
 };
