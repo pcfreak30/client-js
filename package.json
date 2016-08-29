@@ -2,7 +2,7 @@
   "name": "wp-api",
   "version": "0.1.0",
   "scripts": {
-    "postinstall": "bower install && grunt build",
+    "postinstall": "if [ -z \"$NPM_RAN\" ]; then export NPM_RAN=1; npm install; bower install && grunt build; fi",
     "build": "grunt build",
     "test": "grunt"
   },
