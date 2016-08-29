@@ -77,7 +77,7 @@ module.exports = function (grunt) {
 					deps: { // optional, `default` is used as a fallback for rest!
 						'default': ['Backbone'],
 						amd: ['foo', {'backbone': 'Backbone'}],
-						cjs: ['backbone', 'bar']
+						cjs: ['backbone']
 					}
 				}
 			}
