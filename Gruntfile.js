@@ -75,9 +75,9 @@ module.exports = function (grunt) {
 					objectToExport: 'wp', // optional, internal object that will be exported
 					amdModuleId: 'wp-api',
 					deps: { // optional, `default` is used as a fallback for rest!
-						'default': ['Backbone'],
-						amd: ['foo', {'backbone': 'Backbone'}],
-						cjs: ['backbone']
+						'default': ['Backbone','_'],
+						amd: [{'backbone': 'Backbone'}, {'underscore': '_'}],
+						cjs: [{'backbone': 'Backbone'}, {'underscore': '_'}]
 					}
 				}
 			}
